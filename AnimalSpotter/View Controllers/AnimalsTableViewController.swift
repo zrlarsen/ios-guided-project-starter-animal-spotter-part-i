@@ -10,8 +10,12 @@ import UIKit
 
 class AnimalsTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    
     private var animalNames: [String] = []
 
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,6 +42,7 @@ class AnimalsTableViewController: UITableViewController {
     }
 
     // MARK: - Actions
+    
     @IBAction func getAnimals(_ sender: UIBarButtonItem) {
         // fetch all animals from API
     }
@@ -46,10 +51,7 @@ class AnimalsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowAnimalDetailSegue" {
-            // inject dependencies
-        }
-        else if segue.identifier == "LoginViewModalSegue" {
+        if segue.identifier == "LoginViewModalSegue" {
             // inject dependencies
         }
     }
